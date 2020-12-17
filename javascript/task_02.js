@@ -8,7 +8,9 @@ const ingredients = [
     'Приправы',
   ];
 
-const ingredientsList = document.querySelector('ul#ingredients')
+
+
+const ingredientsList = document.querySelector('#ingredients')
 
 function insertItem(array, ingredients) {
   const createElements = array.map(element => {
@@ -20,6 +22,3 @@ function insertItem(array, ingredients) {
 }
 
 insertItem(ingredients, ingredientsList)
-
-
-
