@@ -3,12 +3,17 @@ const buttonIncrement = document.querySelector(`button[data-action="increment"]`
 const buttonDecrement = document.querySelector(`button[data-action="decrement"]`);
 
 function Increment() {
-    counterValue.innerHTML++
+    counterValue.textContent++
 }
 
 function Decrement() {
-    counterValue.innerHTML--
+    counterValue.textContent--
 }
 
 buttonIncrement.addEventListener(`click`, Increment);
 buttonDecrement.addEventListener(`click`, Decrement);
+
+
+
+
+

@@ -3,14 +3,20 @@
 
 
 
-const allCategories = document.getElementsByClassName(`item`).length;
+const allCategories = document.querySelectorAll('ul#categories > li.item');
 
-console.log(`В списке ${allCategories} категории.`);
+console.log(`В списке ${allCategories.length} категории.`);
 
-    let nameCategories = document.querySelectorAll('li.item > h2');
+function getCategoryName(array) {
+    array.forEach((element) =>
+        console.log(`categorie: ${element.firstElementChild.textContent}, Amount of elements: ${element.lastElementChild.children.length}`));
+        }
+getCategoryName(allCategories);
+   
 
-for (let nameCategory of nameCategories) {
 
-    console.log(`categorie: ${nameCategory.innerHTML} => Amount of elements: ${nameCategory.nextElementSibling.children.length}`)
 
-}
+
+
+
+

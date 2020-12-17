@@ -17,8 +17,15 @@ const images = [
 ];
 
 
-for (let image of images) {
- const galleryImages = document.querySelector(`#gallery`);
+const galleryImagesList = document.getElementById('gallery');
 
- galleryImages.insertAdjacentHTML('afterbegin', `<li><img src="${image.url}" alt="${image.alt}"></li>`);
+function getElement(arr, images) {
+	let imagesList = arr.reduce((acc, { url, alt }) => {
+		const element = `<li><img src="${url}" alt="${alt}"></li>`;
+		acc += element;
+		return acc;
+	}, '');
+	return images.insertAdjacentHTML('afterbegin', imagesList);
 }
+
+getElement(images, galleryImagesList);
